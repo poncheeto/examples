@@ -1,15 +1,37 @@
-class Some
+class Being
+  @@count = 0
+
   def initialize
-    method1
-    self.method1
+    @@count += 1
+    puts "Being class created"
   end
 
-  protected
-
-  def method1
-    puts "protected method1 called"
+  def show_count
+    "There are #{@@count} beings"
   end
 end
 
-s = Some.new
-s.method1
+class Human < Being
+  def initialize
+    super
+    puts "Human is created"
+  end
+end
+
+class Animal < Being
+  def initialize
+    super
+    puts "Animal is created"
+  end
+end
+
+class Dog < Animal
+  def initialize
+    super
+    puts "Dog is created"
+  end
+end
+
+Human.new
+d = Dog.new
+puts d.show_count
