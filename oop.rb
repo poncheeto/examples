@@ -1,14 +1,19 @@
-class Person
-  def initialize(name)
-    @name = name
+class Circle
+  @@PI = 3.141592
+
+  def initialize
+    @radius = 0
+  end
+  
+  def set_radius(radius)
+    @radius = radius
   end
 
-  def get_name
-    @name
+  def area
+    @radius * @radius * @@PI
   end
 end
 
-per = Person.new("Jane")
-
-puts per.get_name
-puts per.send :get_name
+c = Circle.new
+c.set_radius(5)
+puts c.area
