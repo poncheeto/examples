@@ -1,9 +1,10 @@
-class Some
-  puts self
+if true
+  puts "This message is shown"
 end
 
-class Other
-  puts self
+if false
+  puts "This message is not shown"
 end
 
-puts self
+p $name
+p $age
