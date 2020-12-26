@@ -1,37 +1,34 @@
-class Being
-  @@count = 0
-
+class Base
   def initialize
-    @@count += 1
-    puts "Being class created"
+    @name = "Base"
   end
 
-  def show_count
-    "There are #{@@count} beings"
+  private
+
+  def private_method
+    puts "private method called"
+  end
+
+  protected
+
+  def protected_method
+    puts "protected method called"
+  end
+
+  public
+
+  def get_name
+    @name
   end
 end
 
-class Human < Being
-  def initialize
-    super
-    puts "Human is created"
+class Derived < Base
+  def public_method
+    private_method
+    protected_method
   end
 end
 
-class Animal < Being
-  def initialize
-    super
-    puts "Animal is created"
-  end
-end
-
-class Dog < Animal
-  def initialize
-    super
-    puts "Dog is created"
-  end
-end
-
-Human.new
-d = Dog.new
-puts d.show_count
+d = Derived.new
+d.public_method
+puts d.get_name
