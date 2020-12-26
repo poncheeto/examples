@@ -17,6 +17,6 @@ end
 
 method1
 
-puts "Inside toplevel"
+puts "Inside top level"
 puts $gb
 puts global_variables.include? :$gb
