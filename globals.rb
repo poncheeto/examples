@@ -1,22 +1,26 @@
-$gb = 6
+class Being
 
-module ModuleM
-  puts "Inside module"
-  puts $gb
+  @@is = true
+
+  def initialize nm
+    @name = nm
+  end
+
+  def to_s
+    "This is #{@name}"
+  end
+
+  def does_exist?
+    @@is
+  end
 end
 
-def method1
-  puts "Inside method"
-  puts $gb
-end
+b1 = Being.new("Being 1")
+b2 = Being.new("Being 2")
+b3 = Being.new("Being 3")
 
-class Some
-  puts "Inside class"
-  puts $gb
-end
+puts b1, b2, b3
 
-method1
-
-puts "Inside top level"
-puts $gb
-puts global_variables.include? :$gb
+p b1.does_exist?
+p b2.does_exist?
+p b3.does_exist?
