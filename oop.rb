@@ -1,10 +1,17 @@
-class Being
+class Person
+  def initialize(name="unknown", age = 0)
+    @name = name
+    @age = age
+  end
 
-  def initialize
-    puts "Being created"
+  def to_s
+    "Name: #{@name}, Age: #{@age}"
   end
 end
 
-b1 = Being.new
-b2 = Being.allocate
-puts b2
+p1 = Person.new
+p2 = Person.new("unknown", 17)
+p3 = Person.new("Becky", 19)
+p4 = Person.new("Robert")
+
+puts p1, p2, p3, p4
