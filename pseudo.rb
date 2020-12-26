@@ -1,10 +1,5 @@
-if true
-  puts "This message is shown"
-end
+system 'echo "Ruby"'
+puts $?
 
-if false
-  puts "This message is not shown"
-end
-
-p $name
-p $age
+%x[exit '1']
+puts $?
