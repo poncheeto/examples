@@ -1,9 +1,9 @@
-class Book
-  attr_accessor :title, :pages
+class Being
+  def to_s
+    "This is Being class"
+  end
 end
 
-b1 = Book.new
-b1.title = "Hidden Motives"
-b1.pages = 255
-
-p "The book #{b1.title} has #{b1.pages} pages"
+b = Being.new
+puts b.to_s
+puts b
