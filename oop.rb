@@ -1,23 +1,9 @@
-class Car
-  attr_reader :name, :price
-  attr_writer :name, :price
-  
-  def to_s
-    "#{name}: #{price}"
-  end
-
+class Book
+  attr_accessor :title, :pages
 end
 
-c1 = Car.new
-c2 = Car.new
+b1 = Book.new
+b1.title = "Hidden Motives"
+b1.pages = 255
 
-c1.name = "Porsche"
-c1.price = 23500
-
-c2.name = "Volkswagen"
-c2.price = 9500
-
-puts "The #{c1.name} costs #{c1.price}"
-
-puts c1
-puts c2
+p "The book #{b1.title} has #{b1.pages} pages"
