@@ -1,27 +1,31 @@
-class Wood
-  def info
-    "This is a wood object"
+class Animal
+
+  def make_noise
+    "Some noise"
+  end
+
+  def sleep
+    puts "#{self.class.name} is sleeping."
+  end
+
+end
+
+class Dog < Animal
+  
+  def make_noise
+    'Woof!'
+  end
+
+end
+
+class Cat < Animal
+
+  def make_noise
+    'Meow!'
   end
 end
 
-wood = Wood.new
-p wood.info
-
-class Brick
-  attr_accessor :info
+[Animal.new, Dog.new, Cat.new].each do |animal|
+  puts animal.make_noise
+  animal.sleep
 end
-
-brick = Brick.new
-brick.info = "This is a brick object"
-p brick.info
-
-class Rock
-end
-
-rock = Rock.new
-
-def rock.info
-  "This is a rock object"
-end
-
-p rock.info
