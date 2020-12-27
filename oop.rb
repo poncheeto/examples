@@ -1,4 +1,19 @@
-include Math
+module Forest
+  class Rock; end
+  class Tree; end
+  class Animal; end
+end
 
-puts PI
-puts sin(2)
+module Town
+  class Pool; end
+  class Cinema; end
+  class Square; end
+  class Animal; end
+end
+
+p Forest::Tree.new
+p Forest::Rock.new
+p Town::Cinema.new
+
+p Forest::Animal.new
+p Town::Animal.new
