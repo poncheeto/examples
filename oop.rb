@@ -1,25 +1,27 @@
 class Wood
-  def self.into
-    "This is a Wood class"
+  def info
+    "This is a wood object"
   end
 end
 
+wood = Wood.new
+p wood.info
+
 class Brick
-  class << self
-    def info
-      "This is a Brick class"
-    end
-  end
+  attr_accessor :info
 end
+
+brick = Brick.new
+brick.info = "This is a brick object"
+p brick.info
 
 class Rock
 end
 
-def Rock.info
-  "This is a Rock class"
+rock = Rock.new
+
+def rock.info
+  "This is a rock object"
 end
 
-
-p Wood.info
-p Brick.info
-p Rock.info
+p rock.info
