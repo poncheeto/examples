@@ -1,19 +1,25 @@
-class Circle
-  def initialize(x)
-    @r = x
+class Wood
+  def self.into
+    "This is a Wood class"
   end
-
-
-  def self.info
-    "This is a Circle class"
-  end
-
-  def area
-    @r * @r * 3.141592
-  end
-
 end
 
-p Circle.info
-c = Circle.new(3)
-p c.area
+class Brick
+  class << self
+    def info
+      "This is a Brick class"
+    end
+  end
+end
+
+class Rock
+end
+
+def Rock.info
+  "This is a Rock class"
+end
+
+
+p Wood.info
+p Brick.info
+p Rock.info
