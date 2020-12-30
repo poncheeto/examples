@@ -1,7 +1,13 @@
-def double_words_in_phrase(string)
-  string_array = string.split(' ')
-  p string_array.map! { |word| word * 2 }
-  string_array.join(' ')
+require 'pry'
+
+def yell_greeting(string)
+  name = string
+
+  binding.pry
+
+  name = name.upcase
+  greeting = "WASSAP, #{name}!"
+  puts greeting
 end
 
-double_words_in_phrase("This is a test")
+yell_greeting("bob")
